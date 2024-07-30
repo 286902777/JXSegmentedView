@@ -49,7 +49,7 @@ open class JXSegmentedTitleCell: JXSegmentedBaseCell {
         guard let myItemModel = itemModel as? JXSegmentedTitleItemModel else {
             return
         }
-
+        titleLabel.textAlignment = myItemModel.textAlignment
         titleLabel.numberOfLines = myItemModel.titleNumberOfLines
         maskTitleLabel.numberOfLines = myItemModel.titleNumberOfLines
 

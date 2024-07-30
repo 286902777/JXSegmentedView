@@ -36,6 +36,7 @@ open class JXSegmentedTitleDataSource: JXSegmentedBaseDataSource{
     /// title是否使用遮罩过渡
     open var isTitleMaskEnabled: Bool = false
 
+    open var textAlignment: NSTextAlignment = .center
 
     open override func preferredItemCount() -> Int {
         return titles.count
@@ -53,6 +54,7 @@ open class JXSegmentedTitleDataSource: JXSegmentedBaseDataSource{
         }
 
         myItemModel.title = titles[index]
+        myItemModel.textAlignment = textAlignment
         myItemModel.textWidth = widthForTitle(myItemModel.title ?? "")
         myItemModel.titleNumberOfLines = titleNumberOfLines
         myItemModel.isSelectedAnimable = isSelectedAnimable
